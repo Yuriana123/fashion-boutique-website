@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang "en">
+    <head>
+        <meta charset="8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fashion boutique project</title>
+        <style>
+            * {margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+            }
+            /*smooth scroll*/
+
+            /*.header div*/
+            header{
+                background: #ff69b4;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+            .navbar{
+                background: #333;
+                padding: 15px;
+                text-align: center;
+                position: sticky;
+                top: 0;
+            }
+            .navbar a{
+                color: white;
+                text-decoration: none;
+                margin: 0 20px;
+                font-size: 18px;
+
+
+            }
+            .navbar a:hover{color: pink;}
+
+            /*hero banner div*/hero{
+                background: url('htpps://picsum.photos/1200/400?fashion') center cover;
+                color: white;
+                text-align: center;
+                padding: 100px 20px;
+
+            }
+            .hero button{
+                padding: 12px 25px;
+                background: pink;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 5px;
+            }
+            /*about div*/
+            .about{
+                text-align: center;
+                padding: 60px 20px;
+                background: white;
+            }
+            .about h2{
+                color: #ff69b4;
+                margin: bottom 15px;
+            }
+            .about p{
+                max-width: 700px;
+                margin: auto;
+                line-height: 1.6;
+                font-size: 18px;
+            }
+            .about img{
+                margin-top: 20px;
+                border-radius: 10px;
+                width: 80%;
+                max-width: 500px;
+            }
+            /*products div*/
+            .products{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 60px 20px;
+                background: #f9f9f9;
+            }
+            .products h2{
+                width: 100%;
+                text-align: center;
+                color: #ff69b4;
+                margin-bottom: 30px;
+            }
+            .products-card{
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                width: 250px;
+                margin: 15px;
+                padding: 15px;
+                text-align: center;
+                background: white;
+                transition: 0.3s;
+            }
+            .products-card:hover{
+                box-shadow: 0 4px 10px rgba(0,0,0,0,2);
+            }
+            .products-card img{
+                width: 100%;
+                border-radius: 10px;
+            }
+            .products-card button{
+                background: #ff69b4;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            /*cart div*/
+            .cart {
+                position: fixed;
+                top: 80px;
+                right: 20px;
+                background: white;
+                padding: 10px 20px;
+                border-radius: 20px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0,2);
+                font-weight: bold;
+            }
+
+            /*footer div*/
+            .contact {
+                background: #333;
+                color: white;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            .contact h2{
+                margin-bottom: 10px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+       
+        <!--cart box-->
+        <div class="cart" id="cart"> cart:0</div>
+        <!--header-->
+        <div class="header" id="home">
+            <h1>fashion boutique website</h1>
+            <p>style that spaks for you</p>
+        </div>
+
+        <!--navbar-this is what controls the click-->
+        <div class="navbar">
+            <a href="#home">Home</a> <!--click =goes to id ="home"-->
+            <a href="#about">about</a> <!--click =goes to id ="about"-->
+            <a href="#product">shop</a> <!--click =goes to id ="products"-->
+            <a href="#contact">contact</a> <!--click =goes to id ="contact"-->
+
+        </div>
+        <!--hero-->
+        <div class="hero">
+            <h2>new summer collection 2026</h2>
+            <button onclick="docunent.getelementarybyid('products').scrollintoview">shop now</button>
+
+        </div>
+        <!--about-->
+        <div class="about" id="about">
+            <h2>about us</h2>
+            <p>welcome to <b>elegant fashion boutique</b>!
+                we bring you the latest trends in dresses, bags, and shoes.
+                our mission is to help every woman and man look stylishly and confident.
+                we deliver across abuja, lagos,and nationwide. Quality fashion at affordable prices.
+
+            </p>
+            <img src="" alt="our store">
+            
+        </div>
+        <!--products-->
+        <div class="products " id="products">
+        <h2>our products</h2>
+
+        <div class="products-card">
+            <img src="dress 1.jpg" alt="dress">
+            <h3>red evening gown</h3>
+            <p>45,000</p>
+            <button onclick="addtocart('red evening gown')">add to cart</button>
+
+        </div>
+
+
+        <div class="products-card">
+            <img src="heels1.webp" alt="shoes">
+            <h3>heels</h3>
+            <p>18,000</p>
+            <button onclick="addtocart('heels 18,000')">add to cart</button
+        </div>
+
+
+        <div class="products-card">
+            <img src="handbag1.jpg" alt="handbag">
+            <h3>handbag</h3>
+            <p>23,000</p>
+            <button onclick="addtocart"('handbag 23,000')>add to cart</button>
+
+        </div>
+    </div>
+        </div>
+        </div>
+    </div>
+    <!--contact-->
+    <div class="contact" id="contact">
+        <h2>contact us</h2>
+        <p>whatsapp:08111251604</p>
+        <p>email:fashionboutique@gmail.com</p>
+        <p>address:Ibadan Nigeria</p>
+        <p>@ 2026 fashion boutique</p>
+    </div>
+
+    <script>
+        let cartcount=0;
+        let carttotal=0;
+
+
+        //javascript function for add to cart
+        function addtocart(item,price){
+            cartcount++;
+            carttotal+=price;
+            document.getElementById("cart").innertext=$(cartcount){carttotal};
+            alert(item+"added to cart!");
+        }
+    </script>
+
+
+    </body>
